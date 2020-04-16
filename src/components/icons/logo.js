@@ -1,5 +1,5 @@
 import React from 'react';
-import { colors, tsd80d, ts32b } from '@design/theme';
+import { colors, tsd80d, ts32m } from '@design/theme';
 import styled from 'styled-components';
 
 const Logo = styled.div`
@@ -8,7 +8,7 @@ const Logo = styled.div`
         ${tsd80d}
     }
     #CODING-CLUB {
-        ${ts32b}
+        ${ts32m}
     }
 `;
 

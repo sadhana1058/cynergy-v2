@@ -4,7 +4,7 @@ import { ts250b, ts100b } from '@design/theme';
 import { media } from '@design/media';
 import { principles } from '@config';
 
-const principlesText = window.innerWidth >= 1000 ? principles.desktop : principles.mobile;
+const principlesText = typeof window !== `undefined` ? (window.innerWidth >= 1000 ? principles.desktop : principles.mobile) : principles.desktop;
 
 const TextWrapper = styled.div`
     position: fixed;
