@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { colors, ts18r } from '@design/theme';
+import { colors, tsm18r } from '@design/theme';
 
 const BaseStyles = createGlobalStyle`
   html {
@@ -14,7 +14,7 @@ const BaseStyles = createGlobalStyle`
   }
 
   body {
-    ${ts18r}
+    ${tsm18r}
     margin: 0;
     width: 100%;
     min-height: 100%;

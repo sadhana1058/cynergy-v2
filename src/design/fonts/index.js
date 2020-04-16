@@ -6,6 +6,7 @@ import ProductSansLight from './ProductSans-Light.ttf';
 import ProductSansMedium from './ProductSans-Medium.ttf';
 import ProductSansThin from './ProductSans-Thin.ttf';
 import PTMonoRegular from './PTMono-Regular.ttf';
+import DevilBreeze from './DevilBreeze-Demi.ttf';
 
 const GlobalFonts = createGlobalStyle`
 	@font-face {
@@ -41,6 +42,12 @@ const GlobalFonts = createGlobalStyle`
 	@font-face {
 		font-family: 'pt-mono-regular';
 		src: url('${PTMonoRegular}') format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'devil-breeze';
+		src: url('${DevilBreeze}') format('truetype');
 		font-weight: normal;
 		font-style: normal;
 	}

@@ -18,6 +18,8 @@ const StyledContent = styled.div`
     min-height: 100vh;
 `;
 
+const isBiggerScreen = window.innerWidth >= 1000;
+
 const Layout = ({ children }) => {
     // const data = useStaticQuery(graphql`
     //     query SiteTitleQuery {
@@ -28,7 +30,6 @@ const Layout = ({ children }) => {
     //         }
     //     }
     // `);
-
     return (
         <div id="root">
             <GlobalStyles />
@@ -37,8 +38,8 @@ const Layout = ({ children }) => {
                 <Navbar />
                 <PrincipleText />
                 <main>{children}</main>
-                <Email />
-                <Social />
+                {isBiggerScreen ? <Email /> : ''}
+                {isBiggerScreen ? <Social /> : ''}
             </StyledContent>
         </div>
     );

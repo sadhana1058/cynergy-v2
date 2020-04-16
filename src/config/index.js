@@ -1,7 +1,10 @@
 module.exports = {
     siteTitle: 'Cynergy | Coding Club',
     tagline: 'collaboration. innovation. competition.',
-    principles: ['bigger', 'better', 'open & free'],
+    principles: {
+        desktop: ['bigger', 'better', 'open & free'],
+        mobile: ['bigger', 'better', 'foss'],
+    },
     siteDescription: 'RUAS official coding club.',
     siteKeywords: 'Cynergy, Coding, Club',
     siteUrl: 'http://cynergyruas.tech',
