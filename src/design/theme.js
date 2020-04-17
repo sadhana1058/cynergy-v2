@@ -50,7 +50,7 @@ export const tsBtn = textStyleMixin(15, 'product-sans-light', 0.5, 20);
 export const tsBtnSmall = textStyleMixin(12, 'product-sans-light', 0.4, 20);
 
 export const colors = {
-    main: '#E15337',
+    main: '#9d1d59',
     text: '#FFFFFF',
     bg: '#191919',
 };
