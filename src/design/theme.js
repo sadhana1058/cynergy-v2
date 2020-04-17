@@ -20,6 +20,7 @@ export const ts80r = textStyleMixin(80, 'product-sans-regular', 0.5, 97);
 export const ts50r = textStyleMixin(50, 'product-sans-regular', 0.5, 61);
 export const ts40r = textStyleMixin(40, 'product-sans-regular', 0.4, 48);
 export const ts20r = textStyleMixin(20, 'product-sans-regular', 0.2, 24);
+export const ts20b = textStyleMixin(20, 'product-sans-bold', 0.2, 24);
 export const ts50b = textStyleMixin(50, 'product-sans-bold', 1.56, 61);
 export const ts40b = textStyleMixin(40, 'product-sans-bold', 0.67, 49);
 export const ts36b = textStyleMixin(36, 'product-sans-bold', 0.6, 36);
@@ -34,12 +35,13 @@ export const ts24l = textStyleMixin(24, 'product-sans-light', 0.6, 28);
 
 export const ts22b = textStyleMixin(22, 'product-sans-bold', 0.6, 26);
 
-export const ts20b = textStyleMixin(20, 'product-sans-bold', 0.5, 26);
 export const ts32m = textStyleMixin(32, 'product-sans-medium', 0.32, 32);
 export const ts20l = textStyleMixin(20, 'product-sans-light', 0.5, 26);
+export const ts18l = textStyleMixin(18, 'product-sans-light', 0.1, 20);
 
 export const ts18b = textStyleMixin(18, 'product-sans-bold', 0.5, 26);
 export const tsm18r = textStyleMixin(18, 'pt-mono-regular', 0.5, 26);
+export const tsm12r = textStyleMixin(12, 'pt-mono-regular', 0.39, 13);
 export const ts18r = textStyleMixin(18, 'product-sans-regular', 0.18, 22);
 export const ts16r = textStyleMixin(16, 'product-sans-regular', 0.1, 20);
 

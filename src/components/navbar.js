@@ -4,6 +4,7 @@ import { LogoIcon } from '@components/icons';
 import { navLinks } from '@config';
 import { tsm18r, colors } from '@design/theme';
 import { media } from '@design/media';
+import Menu from './menu';
 
 const NavbarContainer = styled.div`
     display: flex;
@@ -34,6 +35,7 @@ const Hamburger = styled.div`
     justify-content: center;
     align-items: center;
     ${media.tablet`display:flex`};
+    z-index: 11;
 `;
 const HamburgerBox = styled.div`
     position: relative;
@@ -49,6 +51,7 @@ const HamburgerLine = styled.div`
     display: block;
     top: 50%;
     right: 0;
+    transform: ${props => (props.isMenuOpen ? `rotate(45deg)` : '')};
     &:before,
     &:after {
         width: 24px;
@@ -62,12 +65,14 @@ const HamburgerLine = styled.div`
         right: 0;
     }
     &:before {
-        top: -10px;
-        width: 125%;
+        top: ${props => (props.isMenuOpen ? '0px' : '-10px')};
+        width: ${props => (props.isMenuOpen ? '100%' : '125%')};
+        transform: ${props => (props.isMenuOpen ? `rotate(-90deg)` : '')};
     }
     &:after {
-        bottom: -10px;
-        width: 75%;
+        bottom: ${props => (props.isMenuOpen ? '0px' : '-10px')};
+        width: ${props => (props.isMenuOpen ? '100%' : '75%')};
+        opacity: ${props => (props.isMenuOpen ? 0 : 1)};
     }
 `;
 
@@ -83,27 +88,42 @@ const NavLink = styled.div`
 `;
 
 class Navbar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isMenuOpen: false,
+        };
+    }
+    toggleMenu = () => {
+        this.setState(prevState => ({
+            isMenuOpen: !prevState.isMenuOpen,
+        }));
+        console.log('');
+    };
     render() {
         return (
-            <NavbarContainer>
-                <LogoWrapper>
-                    <a href="/">
-                        <LogoIcon />
-                    </a>
-                </LogoWrapper>
-                <Hamburger>
-                    <HamburgerBox>
-                        <HamburgerLine />
-                    </HamburgerBox>
-                </Hamburger>
-                <NavLinks>
-                    {navLinks.map((navLink, index) => (
-                        <NavLink key={index}>
-                            <a href={navLink.url}>{navLink.name}</a>
-                        </NavLink>
-                    ))}
-                </NavLinks>
-            </NavbarContainer>
+            <>
+                <NavbarContainer>
+                    <LogoWrapper>
+                        <a href="/">
+                            <LogoIcon />
+                        </a>
+                    </LogoWrapper>
+                    <Hamburger onClick={() => this.toggleMenu()}>
+                        <HamburgerBox>
+                            <HamburgerLine isMenuOpen={this.state.isMenuOpen} />
+                        </HamburgerBox>
+                    </Hamburger>
+                    <NavLinks>
+                        {navLinks.map((navLink, index) => (
+                            <NavLink key={index}>
+                                <a href={navLink.url}>{navLink.name}</a>
+                            </NavLink>
+                        ))}
+                    </NavLinks>
+                </NavbarContainer>
+                {this.state.isMenuOpen ? <Menu /> : ''}
+            </>
         );
     }
 }
