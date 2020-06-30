@@ -18,7 +18,7 @@ const StyledContent = styled.div`
     min-height: 100vh;
 `;
 
-const isBiggerScreen = typeof window !== `undefined` ? window.innerWidth >= 1000 : false;
+const isBiggerScreen = typeof window !== `undefined` ? window.innerWidth >= 1200 && window.innerHeight >= 650 : false;
 
 const Layout = ({ children }) => {
     // const data = useStaticQuery(graphql`
