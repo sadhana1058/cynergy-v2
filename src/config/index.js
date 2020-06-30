@@ -60,4 +60,27 @@ module.exports = {
         viewFactor: 0.25,
         viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
     }),
+
+    eventCardsInfo: [
+        {
+            title: 'expert sessions',
+            description:
+                'Cynergy is the first of its kind coding club at RUAS. The purpose of Cynergy is embodied in its core open principles - Collaboration, Innovation and Competition. Cynergy is a plaform to promote learning and development of programming skills. It empowers students with competitive programming skill.',
+        },
+        {
+            title: 'hands-on workshops',
+            description:
+                'Cynergy is the first of its kind coding club at RUAS. The purpose of Cynergy is embodied in its core open principles - Collaboration, Innovation and Competition. Cynergy is a plaform to promote learning and development of programming skills. It empowers students with competitive programming skill.',
+        },
+        {
+            title: 'monthly challenges',
+            description:
+                'Cynergy is the first of its kind coding club at RUAS. The purpose of Cynergy is embodied in its core open principles - Collaboration, Innovation and Competition. Cynergy is a plaform to promote learning and development of programming skills. It empowers students with competitive programming skill.',
+        },
+        {
+            title: 'techfest - aadhya',
+            description:
+                'Cynergy is the first of its kind coding club at RUAS. The purpose of Cynergy is embodied in its core open principles - Collaboration, Innovation and Competition. Cynergy is a plaform to promote learning and development of programming skills. It empowers students with competitive programming skill.',
+        },
+    ],
 };
