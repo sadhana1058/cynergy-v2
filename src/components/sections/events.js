@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { eventCardsInfo } from '@config';
-import { Section, ts40r, tsm18r, ts50b, colors } from '@design/theme';
+import { eventCardsInfo, eventsTitle } from '@config';
+import { Section, ts40r, tsm18r, ts50b, ts36b, ts16r, tsm12r, colors } from '@design/theme';
+import { media } from '@design/media';
 
 const EventsSection = styled(Section)`
     display: flex;
@@ -49,27 +50,39 @@ const ImageContainer = styled.div`
 
     width: 50%;
     height: 100%;
-    border: 3px solid #720073;
-    color: #720073;
 `;
 
 const EventTitle = styled.div`
     ${ts40r}
+    ${media.tablet`${ts40r}`};
+    ${media.phone`${ts40r}`};
+    ${media.tiny`${ts36b}`};
+    ${media.desktop``};
 `;
 
 const EventDescription = styled.div`
     ${tsm18r}
+    ${media.tablet`${tsm18r}`};
+    ${media.phone`${ts16r}`};
+    ${media.tiny`${tsm12r}`};
     background-color: ${colors.main};
     margin: ${({ reverse }) => (reverse ? '20px 20px 20px 0px' : '20px 0px 20px 20px')};
     padding: 15px;
 `;
 
-const EventCard = ({ title, description, reverse }) => {
+const Image = styled.img`
+    max-width: 100%;
+    max-height: 100%;
+`;
+
+const EventCard = ({ title, description, image, reverse }) => {
     // reversed: Image on the right, info on the left.
     // non reversed: Image on the left, info on the right.
     return (
         <EventCardContainer>
-            <ImageContainer reverse={reverse}>Image goes here</ImageContainer>
+            <ImageContainer reverse={reverse}>
+                <Image src={image} alt={title} />
+            </ImageContainer>
             <InfoContainer reverse={reverse}>
                 <EventTitle>{title}</EventTitle>
                 <EventDescription reverse={reverse}>{description}</EventDescription>
@@ -81,9 +94,9 @@ const EventCard = ({ title, description, reverse }) => {
 const Events = () => {
     return (
         <EventsSection id="events">
-            <SectionTitle>Events</SectionTitle>
+            <SectionTitle>{eventsTitle}</SectionTitle>
             {eventCardsInfo.map((info, index) => (
-                <EventCard title={info.title} description={info.description} reverse={index % 2 === 0 ? false : true} />
+                <EventCard key={index} title={info.title} description={info.description} image={info.image} reverse={index % 2 === 0 ? false : true} />
             ))}
         </EventsSection>
     );

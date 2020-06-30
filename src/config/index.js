@@ -1,3 +1,5 @@
+const images = require('@images');
+
 module.exports = {
     siteTitle: 'Cynergy | Coding Club',
     tagline: 'collaboration. innovation. competition.',
@@ -61,26 +63,31 @@ module.exports = {
         viewOffset: { top: 0, right: 0, bottom: 0, left: 0 },
     }),
 
+    eventsTitle: 'events',
     eventCardsInfo: [
         {
             title: 'expert sessions',
             description:
                 'Cynergy is the first of its kind coding club at RUAS. The purpose of Cynergy is embodied in its core open principles - Collaboration, Innovation and Competition. Cynergy is a plaform to promote learning and development of programming skills. It empowers students with competitive programming skill.',
+            image: images.SessionsImage,
         },
         {
             title: 'hands-on workshops',
             description:
                 'Cynergy is the first of its kind coding club at RUAS. The purpose of Cynergy is embodied in its core open principles - Collaboration, Innovation and Competition. Cynergy is a plaform to promote learning and development of programming skills. It empowers students with competitive programming skill.',
+            image: images.WorkshopsImage,
         },
         {
             title: 'monthly challenges',
             description:
                 'Cynergy is the first of its kind coding club at RUAS. The purpose of Cynergy is embodied in its core open principles - Collaboration, Innovation and Competition. Cynergy is a plaform to promote learning and development of programming skills. It empowers students with competitive programming skill.',
+            image: images.ChallengesImage,
         },
         {
             title: 'techfest - aadhya',
             description:
                 'Cynergy is the first of its kind coding club at RUAS. The purpose of Cynergy is embodied in its core open principles - Collaboration, Innovation and Competition. Cynergy is a plaform to promote learning and development of programming skills. It empowers students with competitive programming skill.',
+            image: images.AadhyaImage,
         },
     ],
 };
