@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { eventCardsInfo, eventsTitle } from '@config';
-import { Section, ts40r, tsm18r, ts50b, ts36b, ts16r, tsm12r, colors } from '@design/theme';
+import { Section, ts40r, tsm18r, ts50b, tsm16r, ts36r, colors } from '@design/theme';
 import { media } from '@design/media';
 
 const EventsSection = styled(Section)`
@@ -38,6 +38,12 @@ const InfoContainer = styled.div`
 
     width: 60%;
     height: 100%;
+
+    ${media.thone`
+        width: 100%;
+        align-items: flex-start;
+        background-color: ${colors.main50alpha};
+    `}
 `;
 
 const ImageContainer = styled.div`
@@ -50,29 +56,51 @@ const ImageContainer = styled.div`
 
     width: 50%;
     height: 100%;
+    overflow: hidden;
+
+    ${media.thone`
+        width: 100%;
+    `}
 `;
 
 const EventTitle = styled.div`
     ${ts40r}
-    ${media.tablet`${ts40r}`};
-    ${media.phone`${ts40r}`};
-    ${media.tiny`${ts36b}`};
-    ${media.desktop``};
+    ${media.tablet`${ts36r}`};
+    ${media.thone`
+        padding-left: 25px;
+        padding-top: 30px;
+    `}
+    ${media.phone`
+        font-size: 30px;
+    `}
+    ${media.tiny`
+        font-size: 24px;
+    `}
 `;
 
 const EventDescription = styled.div`
     ${tsm18r}
-    ${media.tablet`${tsm18r}`};
-    ${media.phone`${ts16r}`};
-    ${media.tiny`${tsm12r}`};
     background-color: ${colors.main};
     margin: ${({ reverse }) => (reverse ? '20px 20px 20px 0px' : '20px 0px 20px 20px')};
     padding: 15px;
+
+    ${media.tablet`${tsm16r}`};
+    ${media.thone`
+        background-color: rgba(0, 0, 0, 0);
+        margin: 10px;
+    `}
+    ${media.phone`
+        padding-top: 0px;
+        font-size: 13px;
+    `}
+    ${media.tiny`
+        font-size: 9px;
+    `}
 `;
 
 const Image = styled.img`
-    max-width: 100%;
-    max-height: 100%;
+    object-fit: contain;
+    object-position: 0px 100px;
 `;
 
 const EventCard = ({ title, description, image, reverse }) => {

@@ -19,6 +19,7 @@ export const ts100b = textStyleMixin(100, 'product-sans-bold', 0, 107);
 export const ts80r = textStyleMixin(80, 'product-sans-regular', 0.5, 97);
 export const ts50r = textStyleMixin(50, 'product-sans-regular', 0.5, 61);
 export const ts40r = textStyleMixin(40, 'product-sans-regular', 0.4, 48);
+export const ts36r = textStyleMixin(36, 'product-sans-regular', 0.6, 36);
 export const ts20r = textStyleMixin(20, 'product-sans-regular', 0.2, 24);
 export const ts20b = textStyleMixin(20, 'product-sans-bold', 0.2, 24);
 export const ts50b = textStyleMixin(50, 'product-sans-bold', 1.56, 61);
@@ -41,6 +42,7 @@ export const ts18l = textStyleMixin(18, 'product-sans-light', 0.1, 20);
 
 export const ts18b = textStyleMixin(18, 'product-sans-bold', 0.5, 26);
 export const tsm18r = textStyleMixin(18, 'pt-mono-regular', 0.5, 26);
+export const tsm16r = textStyleMixin(16, 'pt-mono-regular', 0.4, 21);
 export const tsm12r = textStyleMixin(12, 'pt-mono-regular', 0.39, 13);
 export const ts18r = textStyleMixin(18, 'product-sans-regular', 0.18, 22);
 export const ts16r = textStyleMixin(16, 'product-sans-regular', 0.1, 20);
@@ -51,6 +53,7 @@ export const tsBtnSmall = textStyleMixin(12, 'product-sans-light', 0.4, 20);
 
 export const colors = {
     main: '#9d1d59',
+    main50alpha: '#9d1d5980',
     text: '#FFFFFF',
     bg: '#191919',
 };
