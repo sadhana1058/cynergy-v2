@@ -8,6 +8,7 @@ export { default as Hero } from './sections/hero';
 export { default as About } from './sections/about';
 export { default as Events } from './sections/events';
 export { default as PrincipleText } from './principleText';
+export { default as ContactUs } from './sections/contact';
 export { default as Button } from './button';
 export { default as Menu } from './menu';
 export { default as Quote } from './quote';
