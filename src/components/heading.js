@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
+import { media } from '@design/media';
 import { ts60b, colors } from '@design/theme';
 import { Line } from '@components';
 
 const HeadingContainer = styled.div`
     display: flex;
+
     .vertical {
         display: flex;
         flex-direction: column;
@@ -17,6 +19,9 @@ const Text = styled.h2`
     writing-mode: ${props => (props.orientation === 'vertical' ? 'vertical-rl' : 'horizontal-lr')};
     transform: rotate(-180deg);
     direction: rtl;
+    ${media.phone`
+    font-size:20px;
+`}
 `;
 
 const Heading = ({ orientation, children, maxLength1, maxLength2 }) => {
